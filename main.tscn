@@ -1,7 +1,49 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=99 format=2]
 
-[ext_resource path="res://circle.png" type="Texture" id=1]
+[ext_resource path="res://textures/circle.png" type="Texture" id=1]
 [ext_resource path="res://main.gd" type="Script" id=2]
+[ext_resource path="res://textures/title.png" type="Texture" id=3]
+[ext_resource path="res://resources/theme_default.tres" type="Theme" id=4]
+[ext_resource path="res://resources/ubuntu_med.tres" type="DynamicFont" id=5]
+[ext_resource path="res://textures/male_icon.png" type="Texture" id=6]
+[ext_resource path="res://textures/nb_icon.png" type="Texture" id=7]
+[ext_resource path="res://textures/fem_icon.png" type="Texture" id=8]
+[ext_resource path="res://resources/ubuntu_regular.tres" type="DynamicFont" id=9]
+[ext_resource path="res://resources/q2_buttons.tres" type="ButtonGroup" id=10]
+[ext_resource path="res://resources/gender_buttons.tres" type="Theme" id=11]
+[ext_resource path="res://resources/Ubuntu/Ubuntu-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://textures/minus.png" type="Texture" id=13]
+[ext_resource path="res://textures/plus.png" type="Texture" id=14]
+[ext_resource path="res://resources/Ubuntu/Ubuntu-Light.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://resources/Ubuntu/Ubuntu-Medium.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://resources/color_buttons.tres" type="ButtonGroup" id=17]
+[ext_resource path="res://resources/smol.tres" type="DynamicFont" id=18]
+[ext_resource path="res://resources/hobbie_button.tres" type="ButtonGroup" id=19]
+[ext_resource path="res://resources/date.tres" type="ButtonGroup" id=20]
+[ext_resource path="res://resources/friday.tres" type="ButtonGroup" id=21]
+[ext_resource path="res://textures/play.png" type="Texture" id=22]
+[ext_resource path="res://textures/sport.png" type="Texture" id=23]
+[ext_resource path="res://textures/listen.png" type="Texture" id=24]
+[ext_resource path="res://textures/netflix.png" type="Texture" id=25]
+[ext_resource path="res://textures/book.png" type="Texture" id=26]
+[ext_resource path="res://textures/restaurant.png" type="Texture" id=27]
+[ext_resource path="res://textures/house.png" type="Texture" id=28]
+[ext_resource path="res://textures/party.png" type="Texture" id=29]
+[ext_resource path="res://textures/fair.png" type="Texture" id=30]
+[ext_resource path="res://textures/park.png" type="Texture" id=31]
+[ext_resource path="res://textures/mall.png" type="Texture" id=32]
+[ext_resource path="res://textures/cinema.png" type="Texture" id=33]
+[ext_resource path="res://resources/food.tres" type="ButtonGroup" id=34]
+[ext_resource path="res://textures/sushi.png" type="Texture" id=35]
+[ext_resource path="res://textures/pasta.png" type="Texture" id=36]
+[ext_resource path="res://textures/burguer.png" type="Texture" id=37]
+[ext_resource path="res://textures/pizza.png" type="Texture" id=38]
+[ext_resource path="res://textures/chicken.png" type="Texture" id=39]
+[ext_resource path="res://textures/salad.png" type="Texture" id=40]
+[ext_resource path="res://resources/mate.tres" type="ButtonGroup" id=41]
+[ext_resource path="res://resources/rlara.tres" type="ButtonGroup" id=42]
+[ext_resource path="res://textures/match background.png" type="Texture" id=43]
+[ext_resource path="res://textures/love.png" type="Texture" id=44]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.477419, 1 )
@@ -10,41 +52,996 @@ colors = PoolColorArray( 0.831373, 0.0784314, 0.352941, 1, 0.87451, 0.180392, 0.
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
 
-[sub_resource type="Theme" id=3]
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 15 )
 
 [sub_resource type="Animation" id=4]
-resource_name = "menu"
-step = 0.05
-tracks/0/type = "bezier"
+resource_name = "from_menu2"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("basic_info:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -4000 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("basic_info:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("basic_info:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("screen2:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 4000 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("screen2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("screen2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "from_menu3"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("screen3:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 4000 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("screen3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("screen3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("screen2:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -4000 ), Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("screen2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("screen2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+tracks/0/type = "value"
+tracks/0/path = NodePath("basic_info:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("basic_info:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("back:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("next:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sending_screen:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("screen3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("screen3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("background:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("sending_screen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("back:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("next:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.7
+tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 90, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 0.5 )
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 0.0 ]
 }
-tracks/1/type = "bezier"
-tracks/1/path = NodePath("../backbutton1/backbutton1:rect_rotation")
+tracks/1/type = "value"
+tracks/1/path = NodePath("back:rect_rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( -90, -0.25, 0, 0.25, 0, -360, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.5, 1 )
+"times": PoolRealArray( 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -90.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("back:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("basic_info:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -4000 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("basic_info:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("basic_info:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("screen2:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 4000 ), Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("screen2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("screen2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("screen2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -4000 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("screen2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("screen2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("screen3:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 4000 ), Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("screen3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("screen3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.847059, 0.847059, 0.847059, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.564706, 0.564706, 0.564706, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.564706, 0.564706, 0.564706, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="DynamicFont" id=13]
+size = 150
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.913725, 0, 0, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.913725, 0, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.913725, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.0745098, 0.607843, 0, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.0745098, 0.607843, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.0745098, 0.607843, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 1, 0.937255, 0, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 1, 0.937255, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 1, 0.937255, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.454902, 0, 1, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.454902, 0, 1, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.454902, 0, 1, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 1, 0.352941, 0, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 1, 0.352941, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 1, 0.352941, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 1, 0.301961, 0.921569, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 1, 0.301961, 0.921569, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 1, 0.301961, 0.921569, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0, 0.623529, 1, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0, 0.623529, 1, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 0, 0.623529, 1, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=43]
+bg_color = Color( 0.847059, 0.847059, 0.847059, 1 )
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=44]
+bg_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=45]
+bg_color = Color( 0.847059, 0.847059, 0.847059, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.572549, 0.572549, 0.572549, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="DynamicFont" id=46]
+size = 100
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=47]
+bg_color = Color( 0.643137, 0.0627451, 0.270588, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.372549, 0.0352941, 0.156863, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 0.490234, 0.0459595, 0.205621, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.372549, 0.0352941, 0.156863, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="StyleBoxEmpty" id=49]
+
+[sub_resource type="StyleBoxEmpty" id=50]
+
+[sub_resource type="StyleBoxFlat" id=51]
+bg_color = Color( 0.831373, 0.0784314, 0.34902, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.372549, 0.0352941, 0.156863, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="DynamicFont" id=52]
+size = 55
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=53]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.380392, 0.380392, 0.380392, 1 )
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+
+[sub_resource type="Animation" id=54]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -623.296, -197.777 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "intro_end"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0 ]
 }
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MainMenuBckg" type="TextureRect" parent="."]
+[node name="main_menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 540, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="main_menu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = SubResource( 2 )
@@ -53,115 +1050,2226 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="title" type="Node2D" parent="."]
-position = Vector2( 540, 360 )
-scale = Vector2( 7, 7 )
-
-[node name="Label" type="Label" parent="title"]
+[node name="title" type="TextureRect" parent="main_menu"]
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -57.0
-margin_top = -7.0
-margin_right = 57.0
-margin_bottom = 7.0
-text = "Tinder Einzerch"
-align = 1
-uppercase = true
+margin_left = -473.5
+margin_top = 520.14
+margin_right = 473.5
+margin_bottom = 602.14
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StartButton" type="Node2D" parent="."]
-position = Vector2( 540, 1200 )
-scale = Vector2( 7, 7 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="StartButton"]
+[node name="start" type="Button" parent="main_menu"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -35.5
-margin_top = -10.0
-margin_right = 35.5
-margin_bottom = 10.0
-custom_constants/separation = 30
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="StartButton/VBoxContainer"]
-margin_right = 71.0
-margin_bottom = 20.0
+margin_left = -322.0
+margin_top = 219.342
+margin_right = 322.0
+margin_bottom = 379.342
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource( 3 )
+theme = ExtResource( 4 )
 text = "EMPEZAR"
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="menu2bckg" type="TextureRect" parent="."]
-margin_left = -668.342
-margin_top = -241.691
-margin_right = 1641.66
-margin_bottom = 2113.31
-rect_rotation = 90.0
+[node name="test" type="Button" parent="main_menu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 332.0
+margin_top = -944.0
+margin_right = 523.0
+margin_bottom = -848.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 4 )
+text = "TEST"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="main_menu/test"]
+margin_left = -379.0
+margin_top = 11.0
+margin_right = -9.0
+margin_bottom = 206.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="main_menu"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -531.0
+margin_top = -119.543
+margin_right = 531.0
+margin_bottom = -24.5435
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+text = "¡Gracias por participar!"
+align = 1
+
+[node name="menu1" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -960.0
+margin_right = 540.0
+margin_bottom = 960.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 540, -1500 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="menu1"]
+margin_left = -615.618
+margin_top = -216.291
+margin_right = 1694.39
+margin_bottom = 2138.71
 texture = ExtResource( 1 )
 stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Animation" type="AnimationPlayer" parent="menu2bckg"]
+[node name="animation" type="AnimationPlayer" parent="menu1"]
 method_call_mode = 1
-anims/menu = SubResource( 4 )
+anims/from_menu2 = SubResource( 4 )
+anims/from_menu3 = SubResource( 5 )
+anims/sending = SubResource( 6 )
+anims/to_menu1 = SubResource( 7 )
+anims/to_menu2 = SubResource( 8 )
+anims/to_menu3 = SubResource( 9 )
 
-[node name="proximamente" type="Node2D" parent="menu2bckg"]
-scale = Vector2( 7, 7 )
-
-[node name="Label" type="Label" parent="menu2bckg/proximamente"]
-modulate = Color( 0, 0, 0, 1 )
-margin_left = 120.144
-margin_top = 137.962
-margin_right = 224.144
-margin_bottom = 151.962
-text = "PROXIMAMENTE"
+[node name="basic_info" type="Control" parent="menu1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="backbutton1" type="Node2D" parent="."]
+[node name="request" type="Label" parent="menu1/basic_info"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -361.0
+margin_top = 225.36
+margin_right = 361.0
+margin_bottom = 288.36
+custom_fonts/font = ExtResource( 5 )
+text = "Rellena los siguientes datos:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question_1" type="Label" parent="menu1/basic_info"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -270.0
+margin_top = 420.448
+margin_right = 270.0
+margin_bottom = 483.448
+custom_fonts/font = ExtResource( 5 )
+text = "Usuario de instagram"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="at" type="Label" parent="menu1/basic_info/question_1"]
+margin_left = -196.891
+margin_top = 107.934
+margin_right = -143.891
+margin_bottom = 170.934
+custom_fonts/font = ExtResource( 5 )
+text = "@"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="checking" type="Label" parent="menu1/basic_info/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -541.0
+margin_top = 163.5
+margin_right = 531.0
+margin_bottom = 226.5
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.803922, 0.443137, 0.443137, 1 )
+custom_colors/font_outline_modulate = Color( 0.803922, 0.443137, 0.443137, 1 )
+custom_colors/font_color_shadow = Color( 0.803922, 0.443137, 0.443137, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="username" type="LineEdit" parent="menu1/basic_info/question_1"]
+margin_left = -139.891
+margin_top = 90.5518
+margin_right = 768.109
+margin_bottom = 192.552
+custom_styles/read_only = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = ExtResource( 9 )
+align = 1
+placeholder_text = "nombre de usuario"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="menu1/basic_info/question_1"]
+margin_left = -141.0
+margin_top = 89.0
+margin_right = 770.0
+margin_bottom = 197.0
+
+[node name="question_2" type="Label" parent="menu1/basic_info"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -366.248
+margin_top = 721.915
+margin_right = 356.752
+margin_bottom = 784.915
+custom_fonts/font = ExtResource( 5 )
+text = "¿Con cual te identificas mas?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nb_button" type="Button" parent="menu1/basic_info/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -84.0
+margin_top = 59.084
+margin_right = 86.0
+margin_bottom = 229.084
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 10 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="male_icon" type="Sprite" parent="menu1/basic_info/question_2/nb_button"]
+position = Vector2( 85.2145, 84.6897 )
 scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
 
-[node name="backbutton1" type="Button" parent="backbutton1"]
-modulate = Color( 0.831373, 0.0784314, 0.352941, 1 )
-margin_left = -356.814
-margin_top = -423.45
-margin_right = 1815.19
-margin_bottom = 1742.55
-rect_rotation = -90.0
-icon = ExtResource( 1 )
-flat = true
+[node name="male_button" type="Button" parent="menu1/basic_info/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 124.0
+margin_top = 59.084
+margin_right = 294.0
+margin_bottom = 229.084
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 10 )
+align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="proximamente2" type="Node2D" parent="backbutton1/backbutton1"]
-position = Vector2( -2984.89, -785.005 )
-rotation = 1.74846e-07
-scale = Vector2( 35, 35 )
+[node name="male_icon" type="Sprite" parent="menu1/basic_info/question_2/male_button"]
+position = Vector2( 85.2145, 84.6897 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
 
-[node name="Label" type="Label" parent="backbutton1/backbutton1/proximamente2"]
+[node name="fem_button" type="Button" parent="menu1/basic_info/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -292.0
+margin_top = 59.084
+margin_right = -122.0
+margin_bottom = 229.084
+theme = ExtResource( 11 )
+toggle_mode = true
+group = ExtResource( 10 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fem_icon" type="Sprite" parent="menu1/basic_info/question_2/fem_button"]
+position = Vector2( 85.2145, 84.6897 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="question_3" type="Label" parent="menu1/basic_info"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -350.0
+margin_top = 1050.0
+margin_right = 350.0
+margin_bottom = 1113.0
+custom_fonts/font = ExtResource( 5 )
+text = "¿A quien buscas?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="male_button" type="Button" parent="menu1/basic_info/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 50.0
+margin_top = 59.084
+margin_right = 220.0
+margin_bottom = 229.084
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="male_icon" type="Sprite" parent="menu1/basic_info/question_3/male_button"]
+position = Vector2( 85.2145, 84.6897 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 6 )
+
+[node name="fem_button" type="Button" parent="menu1/basic_info/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -218.0
+margin_top = 59.084
+margin_right = -48.0
+margin_bottom = 229.084
+theme = ExtResource( 11 )
+toggle_mode = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fem_icon" type="Sprite" parent="menu1/basic_info/question_3/fem_button"]
+position = Vector2( 85.2145, 84.6897 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="question_4" type="Label" parent="menu1/basic_info"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -350.0
+margin_top = 1400.0
+margin_right = 350.0
+margin_bottom = 1463.0
+custom_fonts/font = ExtResource( 5 )
+text = "¿Cual es tu edad?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus" type="Button" parent="menu1/basic_info/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 91.0
+margin_top = 97.5
+margin_right = 191.0
+margin_bottom = 197.5
+theme = ExtResource( 11 )
+keep_pressed_outside = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus_icon" type="Sprite" parent="menu1/basic_info/question_4/plus"]
+position = Vector2( 50.1299, 49.6455 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 14 )
+
+[node name="minus" type="Button" parent="menu1/basic_info/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.0
+margin_top = 97.023
+margin_right = -90.0
+margin_bottom = 197.023
+theme = ExtResource( 11 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fem_icon" type="Sprite" parent="menu1/basic_info/question_4/minus"]
+position = Vector2( 49.7305, 51.084 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="menu1/basic_info/question_4"]
+margin_left = 258.0
+margin_top = 90.0
+margin_right = 428.0
+margin_bottom = 259.0
+custom_fonts/font = SubResource( 13 )
+text = "18"
+
+[node name="screen2" type="Control" parent="menu1"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 4000.0
+margin_bottom = 4000.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question_1" type="Label" parent="menu1/screen2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -328.5
+margin_top = -733.382
+margin_right = 328.5
+margin_bottom = -670.382
+custom_fonts/font = ExtResource( 5 )
+text = "¿Cual es tu color favorito?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="red" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = 70.2468
+margin_right = 50.0
+margin_bottom = 170.247
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="green" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 60.3087
+margin_top = 70.2468
+margin_right = 160.309
+margin_bottom = 170.247
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 21 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yellow" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 174.86
+margin_top = 70.2468
+margin_right = 274.86
+margin_bottom = 170.247
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 24 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="purple" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -156.066
+margin_top = 70.2468
+margin_right = -56.066
+margin_bottom = 170.247
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 27 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="orange" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -262.132
+margin_top = 70.2468
+margin_right = -162.132
+margin_bottom = 170.247
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 28 )
+custom_styles/pressed = SubResource( 29 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 30 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pink" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.326
+margin_top = 179.141
+margin_right = -2.32596
+margin_bottom = 279.141
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 31 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 33 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="black" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -209.806
+margin_top = 179.141
+margin_right = -109.806
+margin_bottom = 279.141
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 34 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 36 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="white" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 122.534
+margin_top = 179.141
+margin_right = 222.534
+margin_bottom = 279.141
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 37 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 39 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="celeste" type="Button" parent="menu1/screen2/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 7.98273
+margin_top = 179.141
+margin_right = 107.983
+margin_bottom = 279.141
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 40 )
+custom_styles/pressed = SubResource( 41 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 42 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 17 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question_2" type="Label" parent="menu1/screen2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -328.5
+margin_top = -388.512
+margin_right = 328.5
+margin_bottom = -325.512
+custom_fonts/font = ExtResource( 5 )
+text = "¿Cual es tu pasatiempo?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sports" type="Button" parent="menu1/screen2/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -85.0
+margin_top = 54.3426
+margin_right = 85.0
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 19 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_2/sports"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = 1.83752
+margin_right = 83.0
+margin_bottom = 71.8375
+custom_fonts/font = ExtResource( 18 )
+text = "Deporte"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sport" type="Sprite" parent="menu1/screen2/question_2/sports"]
+position = Vector2( 85.0208, 84.988 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 23 )
+
+[node name="music" type="Button" parent="menu1/screen2/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 98.5251
+margin_top = 54.3426
+margin_right = 268.525
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 19 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_2/music"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -101.5
+margin_top = 4.60785
+margin_right = 101.5
+margin_bottom = 74.6078
+custom_fonts/font = ExtResource( 18 )
+text = "Escuchar"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="menu1/screen2/question_2/music"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -102.0
+margin_top = 29.9996
+margin_right = 101.0
+margin_bottom = 74.9996
+custom_fonts/font = ExtResource( 18 )
+text = "música"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="listen" type="Sprite" parent="menu1/screen2/question_2/music"]
+position = Vector2( 82.2883, 84.988 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 24 )
+
+[node name="playing" type="Button" parent="menu1/screen2/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -455.614
+margin_top = 54.3426
+margin_right = -285.614
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 19 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_2/playing"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -116.0
+margin_top = -0.0754395
+margin_right = 116.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Tocar un"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="menu1/screen2/question_2/playing"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -116.0
+margin_top = 23.9996
+margin_right = 116.0
+margin_bottom = 69.9996
+custom_fonts/font = ExtResource( 18 )
+text = "Instrumento"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play" type="Sprite" parent="menu1/screen2/question_2/playing"]
+position = Vector2( 83.7408, 85.304 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 22 )
+
+[node name="reading" type="Button" parent="menu1/screen2/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 282.05
+margin_top = 54.3426
+margin_right = 452.05
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 19 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_2/reading"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = 6.28131
+margin_right = 83.0
+margin_bottom = 76.2813
+custom_fonts/font = ExtResource( 18 )
+text = "Leer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="book" type="Sprite" parent="menu1/screen2/question_2/reading"]
+position = Vector2( 88.0374, 87.5107 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 26 )
+
+[node name="netflix" type="Button" parent="menu1/screen2/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -268.525
+margin_top = 54.3426
+margin_right = -98.5251
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 19 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_2/netflix"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -0.0754395
+margin_right = 83.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Netflix"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="netflix" type="Sprite" parent="menu1/screen2/question_2/netflix"]
+position = Vector2( 85.2303, 84.1472 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 25 )
+
+[node name="question_3" type="Label" parent="menu1/screen2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -497.0
+margin_top = -66.2058
+margin_right = 497.0
+margin_bottom = -3.20581
+custom_fonts/font = ExtResource( 5 )
+text = "¿Que harias en un viernes por la noche?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stay_home" type="Button" parent="menu1/screen2/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 24.2501
+margin_top = 54.3428
+margin_right = 194.25
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 21 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_3/stay_home"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -101.5
+margin_top = 4.60785
+margin_right = 101.5
+margin_bottom = 74.6078
+custom_fonts/font = ExtResource( 18 )
+text = "Estar en casa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="house" type="Sprite" parent="menu1/screen2/question_3/stay_home"]
+position = Vector2( 84.3779, 82.6885 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 28 )
+
+[node name="go_out" type="Button" parent="menu1/screen2/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.158
+margin_top = 54.3426
+margin_right = -22.1576
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 21 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_3/go_out"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -0.0754395
+margin_right = 83.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Salir"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="party" type="Sprite" parent="menu1/screen2/question_3/go_out"]
+position = Vector2( 85.8145, 84.3169 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 29 )
+
+[node name="question_4" type="Label" parent="menu1/screen2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = 263.001
+margin_right = 538.0
+margin_bottom = 326.001
+custom_fonts/font = ExtResource( 5 )
+text = "¿Donde seria tu cita ideal?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="park" type="Button" parent="menu1/screen2/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -518.408
+margin_top = 54.3427
+margin_right = -348.408
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 20 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_4/park"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = 1.83752
+margin_right = 83.0
+margin_bottom = 71.8375
+custom_fonts/font = ExtResource( 18 )
+text = "Parque"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="park" type="Sprite" parent="menu1/screen2/question_4/park"]
+position = Vector2( 86.2573, 84.96 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 31 )
+
+[node name="cinema" type="Button" parent="menu1/screen2/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -345.865
+margin_top = 54.3427
+margin_right = -175.865
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 20 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_4/cinema"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -101.5
+margin_top = 1.43304
+margin_right = 101.5
+margin_bottom = 71.433
+custom_fonts/font = ExtResource( 18 )
+text = "Cine"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cinema" type="Sprite" parent="menu1/screen2/question_4/cinema"]
+position = Vector2( 85.4671, 86.3936 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 33 )
+
+[node name="restaurant" type="Button" parent="menu1/screen2/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -171.644
+margin_top = 54.3427
+margin_right = -1.64392
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 20 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_4/restaurant"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -116.0
+margin_top = -0.0754395
+margin_right = 116.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Restaurante"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restaurant" type="Sprite" parent="menu1/screen2/question_4/restaurant"]
+position = Vector2( 87.4475, 86.3936 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 27 )
+
+[node name="mall" type="Button" parent="menu1/screen2/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.29883
+margin_top = 54.3427
+margin_right = 174.299
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 20 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_4/mall"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = 2.0
+margin_right = 74.0
+margin_bottom = 72.0
+custom_fonts/font = ExtResource( 18 )
+text = "Centro"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="menu1/screen2/question_4/mall"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0001
+margin_top = 27.9997
+margin_right = 73.9999
+margin_bottom = 71.9997
+custom_fonts/font = ExtResource( 18 )
+text = "comercial"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mall" type="Sprite" parent="menu1/screen2/question_4/mall"]
+position = Vector2( 86.4026, 87.187 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 32 )
+
+[node name="atracciones" type="Button" parent="menu1/screen2/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 179.44
+margin_top = 54.3427
+margin_right = 349.44
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 20 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_4/atracciones"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -0.0754395
+margin_right = 83.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Parque de"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="menu1/screen2/question_4/atracciones"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = 24.0
+margin_right = 83.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 18 )
+text = "atracciones"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fair" type="Sprite" parent="menu1/screen2/question_4/atracciones"]
+position = Vector2( 85.56, 86.1562 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 30 )
+
+[node name="home" type="Button" parent="menu1/screen2/question_4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 355.0
+margin_top = 54.3427
+margin_right = 525.0
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 20 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen2/question_4/home"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -0.0754395
+margin_right = 83.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Casa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="house" type="Sprite" parent="menu1/screen2/question_4/home"]
+position = Vector2( 88, 86.1562 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 28 )
+
+[node name="screen3" type="Control" parent="menu1"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 4000.0
+margin_bottom = 4000.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question_1" type="Label" parent="menu1/screen3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -724.001
+margin_right = 538.0
+margin_bottom = -661.001
+custom_fonts/font = ExtResource( 5 )
+text = "¿Cual es tu comida favorita?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hamburguesa" type="Button" parent="menu1/screen3/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -518.408
+margin_top = 54.3427
+margin_right = -348.408
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 34 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_1/hamburguesa"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = 1.83752
+margin_right = 83.0
+margin_bottom = 71.8375
+custom_fonts/font = ExtResource( 18 )
+text = "Hamburguesa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="park" type="Sprite" parent="menu1/screen3/question_1/hamburguesa"]
+position = Vector2( 86.2573, 84.96 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 37 )
+
+[node name="pizza" type="Button" parent="menu1/screen3/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -345.865
+margin_top = 54.3427
+margin_right = -175.865
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 34 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_1/pizza"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -101.5
+margin_top = 1.43304
+margin_right = 101.5
+margin_bottom = 71.433
+custom_fonts/font = ExtResource( 18 )
+text = "Pizza"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cinema" type="Sprite" parent="menu1/screen3/question_1/pizza"]
+position = Vector2( 85.4671, 86.3936 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 38 )
+
+[node name="pasta" type="Button" parent="menu1/screen3/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -171.644
+margin_top = 54.3427
+margin_right = -1.64392
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 34 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_1/pasta"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -116.0
+margin_top = -0.0754395
+margin_right = 116.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Pasta"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restaurant" type="Sprite" parent="menu1/screen3/question_1/pasta"]
+position = Vector2( 87.4475, 86.3936 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 36 )
+
+[node name="sushi" type="Button" parent="menu1/screen3/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.29883
+margin_top = 54.3427
+margin_right = 174.299
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 34 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_1/sushi"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = 2.0
+margin_right = 74.0
+margin_bottom = 72.0
+custom_fonts/font = ExtResource( 18 )
+text = "Sushi"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mall" type="Sprite" parent="menu1/screen3/question_1/sushi"]
+position = Vector2( 86.4026, 87.187 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 35 )
+
+[node name="pollo" type="Button" parent="menu1/screen3/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 179.44
+margin_top = 54.3427
+margin_right = 349.44
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 34 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_1/pollo"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -0.0754395
+margin_right = 83.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Pollo frito"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fair" type="Sprite" parent="menu1/screen3/question_1/pollo"]
+position = Vector2( 85.56, 86.1562 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 39 )
+
+[node name="ensalada" type="Button" parent="menu1/screen3/question_1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 355.0
+margin_top = 54.3427
+margin_right = 525.0
+margin_bottom = 224.343
+theme = ExtResource( 11 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 34 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_1/ensalada"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -0.0754395
+margin_right = 83.0
+margin_bottom = 69.9246
+custom_fonts/font = ExtResource( 18 )
+text = "Ensalada"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="house" type="Sprite" parent="menu1/screen3/question_1/ensalada"]
+position = Vector2( 88, 86.1562 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 40 )
+
+[node name="question_2" type="Label" parent="menu1/screen3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = -401.48
+margin_right = 450.0
+margin_bottom = -338.48
+custom_fonts/font = ExtResource( 5 )
+text = "¿Que sería tu pareja ideal?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="leal" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -478.114
+margin_top = 70.7788
+margin_right = -378.114
+margin_bottom = 170.779
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/leal"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 498.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Leal"
+
+[node name="optimista" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 35.7988
+margin_top = 70.7788
+margin_right = 135.799
+margin_bottom = 170.779
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/optimista"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 652.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Optimista"
+
+[node name="gracioso" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -478.114
+margin_top = 203.97
+margin_right = -378.114
+margin_bottom = 303.97
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/gracioso"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 504.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Gracios@"
+
+[node name="bondadoso" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 35.7988
+margin_top = 203.97
+margin_right = 135.799
+margin_bottom = 303.97
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/bondadoso"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 652.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Bondados@"
+
+[node name="amable" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -478.114
+margin_top = 334.783
+margin_right = -378.114
+margin_bottom = 434.783
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/amable"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 502.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Amable"
+
+[node name="paciente" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 35.7988
+margin_top = 334.783
+margin_right = 135.799
+margin_bottom = 434.783
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/paciente"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 652.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Paciente"
+
+[node name="valiente" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -478.114
+margin_top = 464.262
+margin_right = -378.114
+margin_bottom = 564.262
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/valiente"]
+margin_left = 116.0
+margin_top = 18.0
+margin_right = 493.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Valiente"
+
+[node name="inteligente" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 35.7988
+margin_top = 464.262
+margin_right = 135.799
+margin_bottom = 564.262
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/inteligente"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 652.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Inteligente"
+
+[node name="carismatico" type="Button" parent="menu1/screen3/question_2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -178.145
+margin_top = 580.044
+margin_right = -78.1447
+margin_bottom = 680.044
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 41 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_2/carismatico"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 652.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Carismatic@"
+
+[node name="question_3" type="Label" parent="menu1/screen3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -450.0
+margin_top = 330.52
+margin_right = 450.0
+margin_bottom = 393.52
+custom_fonts/font = ExtResource( 5 )
+text = "¿Que valoras mas en una relación?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lealtad" type="Button" parent="menu1/screen3/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -478.114
+margin_top = 70.7788
+margin_right = -378.114
+margin_bottom = 170.779
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 42 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_3/lealtad"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 498.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Lealtad"
+
+[node name="comunicacion" type="Button" parent="menu1/screen3/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 35.7988
+margin_top = 70.7788
+margin_right = 135.799
+margin_bottom = 170.779
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 42 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_3/comunicacion"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 652.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Comunicación"
+
+[node name="sinceridad" type="Button" parent="menu1/screen3/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -478.114
+margin_top = 203.97
+margin_right = -378.114
+margin_bottom = 303.97
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 42 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_3/sinceridad"]
+margin_left = 119.52
+margin_top = 18.0
+margin_right = 506.52
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Sinceridad"
+
+[node name="cariño" type="Button" parent="menu1/screen3/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 35.7988
+margin_top = 203.97
+margin_right = 135.799
+margin_bottom = 303.97
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 42 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_3/cariño"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 652.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Cariño"
+
+[node name="humor" type="Button" parent="menu1/screen3/question_3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -478.114
+margin_top = 334.783
+margin_right = -378.114
+margin_bottom = 434.783
+theme = ExtResource( 11 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/disabled = SubResource( 17 )
+custom_styles/normal = SubResource( 45 )
+toggle_mode = true
+keep_pressed_outside = true
+group = ExtResource( 42 )
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="menu1/screen3/question_3/humor"]
+margin_left = 117.0
+margin_top = 18.0
+margin_right = 502.0
+margin_bottom = 101.0
+custom_fonts/font = ExtResource( 9 )
+text = "Humor"
+
+[node name="sending_screen" type="Control" parent="menu1"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="menu1/sending_screen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -25.4054
+margin_right = -25.4054
+disabled = true
+texture_disabled = ExtResource( 43 )
+expand = true
+
+[node name="sent" type="Label" parent="menu1/sending_screen"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -563.65
+margin_right = 540.0
+margin_bottom = -450.65
+custom_fonts/font = SubResource( 46 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+text = "¡HICISTE MATCH!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="s_username" type="Label" parent="menu1/sending_screen"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -540.0
+margin_top = 1163.0
+margin_right = 540.0
+margin_bottom = 1233.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+text = "@USERNAME"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="menu1/sending_screen/s_username"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="label1" type="Label" parent="menu1/sending_screen"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -540.0
+margin_top = 648.436
+margin_right = 540.0
+margin_bottom = 745.436
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+text = "Eres mas compatible con:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="love" type="Sprite" parent="menu1/sending_screen"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 531.249, 949.329 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 44 )
+
+[node name="back" type="Button" parent="menu1"]
+visible = false
+margin_left = 26.0
+margin_top = 24.0
+margin_right = 313.0
+margin_bottom = 176.0
+rect_rotation = -78.5643
+rect_pivot_offset = Vector2( -100, -100 )
+custom_styles/hover = SubResource( 47 )
+custom_styles/pressed = SubResource( 48 )
+custom_styles/focus = SubResource( 49 )
+custom_styles/disabled = SubResource( 50 )
+custom_styles/normal = SubResource( 51 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Atrás"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="send" type="Button" parent="menu1"]
+visible = false
+margin_left = 34.1346
+margin_top = 1645.13
+margin_right = 321.134
+margin_bottom = 1797.13
+rect_pivot_offset = Vector2( -100, -100 )
+custom_styles/hover = SubResource( 47 )
+custom_styles/pressed = SubResource( 48 )
+custom_styles/focus = SubResource( 49 )
+custom_styles/disabled = SubResource( 50 )
+custom_styles/normal = SubResource( 51 )
+custom_fonts/font = SubResource( 52 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Enviar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next" type="Button" parent="menu1"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -332.36
+margin_top = -192.317
+margin_right = -45.3572
+margin_bottom = -40.3174
+rect_pivot_offset = Vector2( -100, -100 )
+custom_styles/hover = SubResource( 47 )
+custom_styles/pressed = SubResource( 48 )
+custom_styles/focus = SubResource( 49 )
+custom_styles/disabled = SubResource( 53 )
+custom_styles/normal = SubResource( 51 )
+custom_fonts/font = SubResource( 52 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+disabled = true
+text = "Siguiente"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="intro_sequence" type="TextureRect" parent="."]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 100.108
-margin_top = 49.6973
-margin_right = 140.108
-margin_bottom = 63.6973
-text = "ATRÁS"
+margin_left = -623.296
+margin_top = -197.777
+margin_right = 1686.71
+margin_bottom = 2157.22
+texture = ExtResource( 1 )
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_up" from="StartButton/VBoxContainer/Button" to="." method="_start_button_p"]
-[connection signal="button_up" from="backbutton1/backbutton1" to="." method="_on_backbutton1_button_up"]
+
+[node name="intro_anim" type="AnimationPlayer" parent="intro_sequence"]
+anims/intro = SubResource( 54 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="fetchpfpurl" type="HTTPRequest" parent="."]
+
+[node name="fetchpfp" type="HTTPRequest" parent="."]
+
+[node name="checkusername" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="."]
+
+[node name="inputblocking" type="TextureButton" parent="."]
+visible = false
+margin_left = -6673.0
+margin_top = -6512.0
+margin_right = 7081.0
+margin_bottom = 7289.0
+expand = true
+
+[connection signal="pressed" from="main_menu/start" to="." method="_start"]
+[connection signal="pressed" from="main_menu/test" to="." method="_test"]
+[connection signal="animation_finished" from="menu1/animation" to="." method="_on_animation_animation_finished"]
+[connection signal="animation_started" from="menu1/animation" to="." method="_on_animation_animation_started"]
+[connection signal="pressed" from="menu1/basic_info/question_1/TextureButton" to="." method="_line_edit_pressed"]
+[connection signal="button_down" from="menu1/basic_info/question_2/nb_button" to="." method="_nb_gender"]
+[connection signal="button_down" from="menu1/basic_info/question_2/male_button" to="." method="_male_gender"]
+[connection signal="button_down" from="menu1/basic_info/question_2/fem_button" to="." method="_fem_gender"]
+[connection signal="button_down" from="menu1/basic_info/question_4/plus" to="." method="_plus_button"]
+[connection signal="button_down" from="menu1/basic_info/question_4/minus" to="." method="_minus_button"]
+[connection signal="button_down" from="menu1/screen2/question_1/red" to="." method="_on_red_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/green" to="." method="_on_green_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/yellow" to="." method="_on_yellow_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/purple" to="." method="_on_purple_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/orange" to="." method="_on_orange_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/pink" to="." method="_on_pink_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/black" to="." method="_on_black_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/white" to="." method="_on_white_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_1/celeste" to="." method="_on_celeste_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_2/sports" to="." method="_on_sports_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_2/music" to="." method="_on_music_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_2/playing" to="." method="_on_playing_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_2/reading" to="." method="_on_reading_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_2/netflix" to="." method="_on_netflix_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_3/stay_home" to="." method="_on_stay_home_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_3/go_out" to="." method="_on_go_out_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_4/park" to="." method="_on_park_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_4/cinema" to="." method="_on_cinema_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_4/restaurant" to="." method="_on_restaurant_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_4/mall" to="." method="_on_mall_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_4/atracciones" to="." method="_on_atracciones_button_down"]
+[connection signal="button_down" from="menu1/screen2/question_4/home" to="." method="_on_home_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_1/hamburguesa" to="." method="_on_hamburguesa_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_1/pizza" to="." method="_on_pizza_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_1/pasta" to="." method="_on_pasta_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_1/sushi" to="." method="_on_sushi_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_1/pollo" to="." method="_on_pollo_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_1/ensalada" to="." method="_on_ensalada_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/leal" to="." method="_on_leal_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/optimista" to="." method="_on_optimista_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/gracioso" to="." method="_on_gracioso_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/bondadoso" to="." method="_on_bondadoso_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/amable" to="." method="_on_amable_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/paciente" to="." method="_on_paciente_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/valiente" to="." method="_on_valiente_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/inteligente" to="." method="_on_inteligente_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_2/carismatico" to="." method="_on_carismatico_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_3/lealtad" to="." method="_on_lealtad_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_3/comunicacion" to="." method="_on_comunicacion_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_3/sinceridad" to="." method="_on_sinceridad_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_3/cariño" to="." method="_on_cario_button_down"]
+[connection signal="button_down" from="menu1/screen3/question_3/humor" to="." method="_on_humor_button_down"]
+[connection signal="button_down" from="menu1/sending_screen/s_username/TextureButton" to="." method="_on_TextureButton_button_down"]
+[connection signal="button_up" from="menu1/back" to="." method="_back_pressed"]
+[connection signal="button_up" from="menu1/send" to="." method="_send_button"]
+[connection signal="button_up" from="menu1/next" to="." method="_next1"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_HTTPRequest_completed"]
+[connection signal="request_completed" from="fetchpfpurl" to="." method="urlreceived"]
+[connection signal="request_completed" from="checkusername" to="." method="usrchack"]
